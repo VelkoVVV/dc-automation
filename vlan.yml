@@ -2,7 +2,7 @@
 ---                     
 # Playbook for creation of VLAN on Cisco Nexus switches
   - name: create a new VLAN 
-    hosts: leaf_one
+    hosts: all
 
     tasks:
       - name: provision VLAN
