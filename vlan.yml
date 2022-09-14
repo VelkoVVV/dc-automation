@@ -1,7 +1,7 @@
 
 ---                     
-# Playbook for creation of VLAN on Cisco Nexus switches
-  - name: create a new VLAN 
+# Playbook for creation of VLANs on Cisco Nexus switches
+  - name: create new VLANs 
     hosts: all
 
     tasks:
