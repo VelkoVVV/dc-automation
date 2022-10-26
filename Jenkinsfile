@@ -3,7 +3,7 @@ properties([pipelineTriggers([githubPush()])])
 
 node {
 
-checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'e77b9a03-e38f-4419-a40b-8b164bd80bbb', url: 'https://github.com/netdevops-1/dc-automation.git/']]])
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'faisal_netdevops-1', url: 'https://github.com/netdevops-1/dc-automation.git/']]])
 
 stage('Build') {
     echo 'Build stage'
