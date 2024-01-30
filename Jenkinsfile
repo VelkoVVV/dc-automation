@@ -3,12 +3,12 @@ properties([pipelineTriggers([githubPush()])])
 
 node {
 
-checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'faisal_netdevops-1', url: 'https://github.com/netdevops-1/dc-automation.git/']]])
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'VelkoUsernamePassword', url: 'https://github.com/VelkoVVV/dc-automation.git/']]])
 
 stage('Build') {
     echo 'Build stage'
     sh "docker run -dit --name ansible_git netdevops/ansible_git_v1"
-    sh 'docker exec -i ansible_git /bin/sh -c "git clone https://github.com/netdevops-1/dc-automation.git"'
+    sh 'docker exec -i ansible_git /bin/sh -c "git clone https://github.com/VelkoVVV/dc-automation.git"'
 }
 stage('Test') {
     echo 'Test stage'
