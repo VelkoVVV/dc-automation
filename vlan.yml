@@ -13,5 +13,6 @@
         with_items:
          -  101
          -  102
+         -  103
         tags: add vlans
 
